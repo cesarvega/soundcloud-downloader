@@ -26,7 +26,7 @@ export class AppComponent {
     this.isLoading = true;
     this.error = '';
 
-    this.http.post('http://localhost:3000/download', { url: this.trackUrl }, { responseType: 'blob', observe: 'response' })
+    this.http.post('https://soundcloud-downloader-gplk.onrender.com/download', { url: this.trackUrl }, { responseType: 'blob', observe: 'response' })
       .subscribe({
         next: (response: HttpResponse<Blob>) => {
           const disposition = response.headers.get('Content-Disposition');
