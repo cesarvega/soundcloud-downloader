@@ -26,9 +26,23 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-p {
-  color: #666;
+.instructions {
+  text-align: left;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 1rem 1rem 1rem 2.5rem;
   margin-bottom: 2rem;
+}
+
+.instructions h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.instructions ol {
+  padding-left: 0;
+  margin: 0;
 }
 
 .form-container {
@@ -73,4 +87,10 @@ button:disabled {
   background-color: #fbe9e7;
   border: 1px solid #ffcdd2;
   border-radius: 4px;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 2rem;
 }
