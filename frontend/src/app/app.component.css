@@ -60,6 +60,9 @@ input[type="text"] {
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: white;

@@ -22,7 +22,11 @@
       />
       <button (click)="download()" [disabled]="isLoading">
         <span *ngIf="!isLoading">Download</span>
-        <span *ngIf="isLoading">Downloading...</span>
+        <mat-progress-spinner
+          *ngIf="isLoading"
+          [diameter]="24"
+          mode="indeterminate">
+        </mat-progress-spinner>
       </button>
     </div>
 

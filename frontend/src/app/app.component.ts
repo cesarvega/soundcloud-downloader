@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { saveAs } from 'file-saver';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, MatProgressSpinnerModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -26,7 +28,7 @@ export class AppComponent {
     this.isLoading = true;
     this.error = '';
 
-    this.http.post('https://soundcloud-downloader-gplk.onrender.com/download', { url: this.trackUrl }, { responseType: 'blob', observe: 'response' })
+    this.http.post('http://localhost:3000/download', { url: this.trackUrl }, { responseType: 'blob', observe: 'response' })
       .subscribe({
         next: (response: HttpResponse<Blob>) => {
           const disposition = response.headers.get('Content-Disposition');
